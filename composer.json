@@ -1,0 +1,19 @@
+{
+    "name": "igoreus/kata",
+    "description": "",
+    "authors": [
+        {
+            "name": "Igor Veremchuk",
+            "email": "igor.veremchuk@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kata\\": ""
+        }
+    }
+}
