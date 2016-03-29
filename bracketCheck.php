@@ -1,6 +1,6 @@
 <?php
 
-namespace Kata;
+namespace Kata\BracketCheck;
 
 /*
  * A new language consists of only a few brackets, you need to build a compiler for the new language and report whether the code compiles or not.
