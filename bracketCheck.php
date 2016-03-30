@@ -1,6 +1,6 @@
 <?php
 
-namespace Kata\BracketCheck;
+namespace Kata;
 
 /*
  * A new language consists of only a few brackets, you need to build a compiler for the new language and report whether the code compiles or not.
@@ -16,8 +16,6 @@ namespace Kata\BracketCheck;
  */
 class BracketCheck
 {
-    /** @var array */
-    private $list;
     /** @var array  */
     private $brackets = [
         '{' => '}',
@@ -27,31 +25,10 @@ class BracketCheck
     ];
 
     /**
-     * @param array $list
-     */
-    public function __construct(array $list)
-    {
-        $this->list = $list;
-    }
-
-    /**
-     * @return array
-     */
-    public function run()
-    {
-        $result = [];
-        foreach ($this->list as  $str) {
-            $result[$str] = $this->check($str);
-        }
-
-        return $result;
-    }
-
-    /**
      * @param $str
      * @return bool
      */
-    private function check($str)
+    public function check($str)
     {
         $arr = str_split($str);
 
