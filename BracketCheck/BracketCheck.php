@@ -12,7 +12,7 @@ namespace Kata\BracketCheck;
  * '<', '>'
  * For example the expression "((({<()>}[])))" should compile without errors, whereas "[<[>]])" this is incorrect.
  *
- * @author Igor Veremchuk igor.veremchuk@rocket-internet.de
+ * @author Igor Veremchuk igor.veremchuk@gmail.com
  */
 interface BracketCheck
 {

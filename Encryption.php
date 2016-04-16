@@ -22,17 +22,39 @@ namespace Kata;
  * and then displaying the next column and inserting a space, and so on.
  *  For example, the encoded message for the above rectangle is:
  * "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau"
- * @author Igor Veremchuk igor.veremchuk@rocket-internet.de
+ * @author Igor Veremchuk igor.veremchuk@gmail.com
  */
 class Encryption
 {
 
     /**
-     * @return int
+     * @param string $str
+     * @return string
      */
     public function encrypt($str)
     {
+        $arr = str_split(str_replace(' ', '', $str));
+        $count = count($arr);
+        $rows = floor(sqrt($count));
+        $columns = ceil($count / sqrt($count));
 
+        $chunkedArr = array_chunk($arr, $columns);
 
+        $result = [];
+
+        for ($i = 0; $i <= $rows; $i++) {
+            foreach ($chunkedArr as $arr) {
+                if (isset($arr[$i])) {
+                    $result[$i][] = $arr[$i];
+                }
+            }
+
+        }
+        $strToReturn = '';
+        foreach ($result as $res) {
+            $strToReturn .= join('', $res) . ' ';
+        }
+
+        return trim($strToReturn);
     }
 }

@@ -9,7 +9,7 @@ namespace Kata;
  * price P for fi is Pfi=(x+1)×ci.
  *  Find  the minimum cost for your group to purchase N flowers.
  *
- * @author Igor Veremchuk igor.veremchuk@rocket-internet.de
+ * @author Igor Veremchuk igor.veremchuk@gmail.com
  */
 class GreedyFlorist
 {

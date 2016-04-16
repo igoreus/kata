@@ -1,9 +1,9 @@
 <?php
 
-namespace Kata\Util\StopWatch;
+namespace Kata\Util;
 
 /**
- * @author Igor Veremchuk igor.veremchuk@rocket-internet.de
+ * @author Igor Veremchuk igor.veremchuk@gmail.com
  */
 class StopWatch
 {
