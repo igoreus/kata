@@ -1,6 +1,6 @@
 <?php
 
-namespace Kata;
+namespace Kata\Encryption;
 
 /*
  * An English text needs to be encrypted using the following encryption scheme.

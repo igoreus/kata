@@ -1,6 +1,6 @@
 <?php
 
-namespace Kata;
+namespace Kata\GreedyFlorist;
 
 /*
  * You and K−1 friends want to buy N flowers. Each flower fi has some cost ci.

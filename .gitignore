@@ -1,4 +1,5 @@
 # common
 .idea
+.vagrant
 /vendor/
 composer.phar
