@@ -45,16 +45,6 @@ foreach ($matrices as $matrix) {
     var_export($matrixRotation->rotate());
 }
 
-
-
-echo 'Encryption: ' . PHP_EOL;
-
-$str = 'if man was meant to stay on the ground god would have given us roots';
-$str = 'chillout';
-
-$encryption = new Encryption();
-echo $encryption->encrypt($str);
-
 echo 'Bracket check 1:' . PHP_EOL;
     $bracketCheck = new BracketCheckImplementationOne();
     foreach ($strList as $str) {
