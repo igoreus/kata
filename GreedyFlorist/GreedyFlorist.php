@@ -13,32 +13,19 @@ namespace Kata\GreedyFlorist;
  */
 class GreedyFlorist
 {
-    /** @var  int */
-    private $people;
-    /** @var array  */
-    private $costs = [];
-
     /**
-     * @param int $people
+     * @param $people
      * @param array $costs
-     */
-    public function __construct($people, array $costs)
-    {
-        $this->flowers = count($costs);
-        $this->costs = $costs;
-        rsort($this->costs);
-        $this->people = $people;
-    }
-
-    /**
      * @return int
      */
-    public function calculate()
+    public function calculate($people, array $costs)
     {
+        $flowers = count($costs);
+        rsort($costs);
         $sum = 0;
 
-        for ($i = 0; $i < $this->flowers; ++$i) {
-            $sum += ((int)($i/$this->people) + 1) * $this->costs[$i];
+        for ($i = 0; $i < $flowers; ++$i) {
+            $sum += ((int)($i/$people) + 1) * $costs[$i];
         }
 
         return $sum;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kata\AppBundle\Command;
+namespace Kata\Command;
 
 use Kata\Encryption\Encryption;
 use Symfony\Component\Console\Command\Command;

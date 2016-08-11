@@ -8,34 +8,22 @@ namespace Kata\Matrix;
 class CounterClockwiseRotation implements Rotatable
 {
 
-    /** @var  array */
-    private $matrix;
-
     /**
-     * @param array $matrix
+     * @inheritdoc
      */
-    public function __construct(array $matrix)
+    public function rotate(array $matrix)
     {
-        $this->matrix = $matrix;
-    }
-
-    /**
-     * @return array
-     */
-    public function rotate()
-    {
-        $height = count($this->matrix);
-        $width = count($this->matrix[0]);
+        $height = count($matrix);
+        $width = count($matrix[0]);
         $res = [];
 
         for ($i = 0; $i < $height; $i++) {
             for ($j = 0; $j < $width; $j++) {
-                $res[$height - $j - 1][$i] = $this->matrix[$i][$j];
+                $res[$height - $j - 1][$i] = $matrix[$i][$j];
             }
         }
         ksort($res);
-        $this->matrix = array_values($res);
-        return $this->matrix;
+        return array_values($res);
     }
 }
 

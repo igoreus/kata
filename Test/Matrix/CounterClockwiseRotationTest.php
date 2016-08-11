@@ -14,9 +14,9 @@ class CounterClockwiseRotationTest extends \PHPUnit_Framework_TestCase
      */
     public function rotate($matrix, $expectedMatrix)
     {
-        $matrixRotation = new CounterClockwiseRotation($matrix);
-        $rotatedMatrix = $matrixRotation->rotate();
-        $this->assertEquals($expectedMatrix, $rotatedMatrix);
+        $matrixRotation = new CounterClockwiseRotation();
+
+        $this->assertEquals($expectedMatrix, $matrixRotation->rotate($matrix));
     }
 
     /**
@@ -30,11 +30,11 @@ class CounterClockwiseRotationTest extends \PHPUnit_Framework_TestCase
             [4,5,6,1,],
             [7,8,9,1,],
         ];
-        $matrixRotation = new CounterClockwiseRotation($matrix);
-        $matrixRotation->rotate();
-        $matrixRotation->rotate();
-        $matrixRotation->rotate();
-        $rotatedMatrix = $matrixRotation->rotate();
+        $matrixRotation = new CounterClockwiseRotation();
+        $rotatedMatrix = $matrixRotation->rotate($matrix);
+        $rotatedMatrix = $matrixRotation->rotate($rotatedMatrix);
+        $rotatedMatrix = $matrixRotation->rotate($rotatedMatrix);
+        $rotatedMatrix = $matrixRotation->rotate($rotatedMatrix);
         $this->assertEquals($matrix, $rotatedMatrix);
     }
 

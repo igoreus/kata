@@ -7,7 +7,11 @@ namespace Kata\Matrix;
  */
 interface Rotatable
 {
-    public function rotate();
+    /**
+     * @param array $matrix
+     * @return array
+     */
+    public function rotate(array $matrix);
 }
 
 

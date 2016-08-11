@@ -7,6 +7,10 @@ use Symfony\Component\Console\Application;
 
 $application = new Application();
 
-$application->add(new \Kata\AppBundle\Command\EncryptionCommand());
+$application->addCommands(
+    [
+        new \Kata\Command\EncryptionCommand()
+    ]
+);
 
 $application->run();

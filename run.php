@@ -4,7 +4,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Kata\BracketCheck\BracketCheckImplementationTwo;
 use Kata\BracketCheck\BracketCheckImplementationOne;
 use Kata\GreedyFlorist\GreedyFlorist;
-use Kata\Encryption\Encryption;
 use Kata\Matrix\CounterClockwiseRotation;
 
 $strList = [
